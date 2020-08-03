@@ -2,9 +2,11 @@ function checkR() {
     return true;
 }
 function checkY() {
+    return true;
 
 }
 function checkX() {
+    return true;
 
 }
 const submit = function(event) {
@@ -63,7 +65,7 @@ const submit = function(event) {
     //}
 }
 document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector('#sendButton').addEventListener('click', onInputChanges);
+    document.querySelector('#sendButton').addEventListener('click',submit);
 });/*
 let table = front.getElementById(table);
 let rows = table.rows;
