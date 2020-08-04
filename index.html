@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First web lab</title>
+    <link rel="stylesheet" type="text/css" href="Css/page.css">
+    <link rel="stylesheet" type="text/css" href="Css/table.css">
+    <link rel="stylesheet" type="text/css" href="Css/input.css">
+</head>
+<body>
+<header class="title">
+    <div>
+        <span>Вариант 2627</span>
+        <span class="name-group">Елена Ходосова, P3230</span>
+    </div>
+</header>
+<div class="page">
+<form class="send_form" id="send_form">
+    <div class="input_values">
+        <div class="y-group">
+            <label for="y-value" id="r-label">Y Value:</label>
+            <input type="text" id="y-value" required>
+        </div>
+        <br>
+        <div class="r-group">
+            <label for="r-value">R Value:</label>
+        <div class="r-vals" id="r-value">
+            <div>
+            <input type="checkbox" id="r-1" name="r" value="1">
+            <label for="r-1">1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="r-2" name="r" value="2">
+            <label for="r-2">2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="r-3" name="r" value="3">
+            <label for="r-3">3</label>
+        </div>
+        <div>
+            <input type="checkbox" id="r-4" name="r" value="4">
+            <label for="r-4">4</label>
+        </div>
+        <div>
+            <input type="checkbox" id="r-5" name="r" value="5">
+            <label for="r-5">5</label>
+        </div>
+        </div>
+        </div>
+        <br>
+        <div class="x-vals" id="x_vals">
+            <label for="x-value">X Value:</label>
+            <div class="radio" id="x-value">
+                <input type="radio" id="x-val-1"
+                       name="x-val" value="-3">
+                <label for="x-val-1">-3</label>
+                <br>
+                <input type="radio" id="x-val-2"
+                       name="x-val" value="-2">
+                <label for="x-val-2">-2</label>
+                <br>
+
+                <input type="radio" id="x-val-3"
+                       name="x-val" value= "-1">
+                <label for="x-val-3">-1</label>
+                <br>
+
+                <input type="radio" id="x-val-4"
+                       name="x-val" value= "0">
+                <label for="x-val-4">0</label>
+                <br>
+
+                <input type="radio" id="x-val-5"
+                       name="x-val" value= "1">
+                <label for="x-val-5">1</label>
+                <br>
+
+                <input type="radio" id="x-val-6"
+                       name="x-val" value= "2">
+                <label for="x-val-6">2</label>
+                <br>
+
+                <input type="radio" id="x-val-7"
+                       name="x-val" value= "3">
+                <label for="x-val-7">3</label>
+                <br>
+
+                <input type="radio" id="x-val-8"
+                       name="x-val" value= "4">
+                <label for="x-val-8">4</label>
+                <br>
+
+                <input type="radio" id="x-val-9"
+                       name="x-val" value= "5">
+                <label for="x-val-9">5</label>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="sender" type="submit" id="sendButton">Send</button>
+        <button class="button" type="button" id="clearButton">Clear</button>
+    </div>
+</form>
+    <img src="resources/odz.png" id="odz">
+<div class="table" id="res">
+    <table>
+        <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>R</th>
+            <th>Current time</th>
+            <th>Script time</th>
+            <th>Result</th>
+        </tr>
+    </table>
+</div>
+</div>
+
+<img src="resources/cat.gif" id="cat">
+<script src="Js/front_script.js"></script>
+</body>
+</html>
