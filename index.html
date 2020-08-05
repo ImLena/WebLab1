@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>First web lab</title>
+    <link rel="icon" type="image/png" href="resources/angry.gif">
     <link rel="stylesheet" type="text/css" href="Css/page.css">
     <link rel="stylesheet" type="text/css" href="Css/table.css">
     <link rel="stylesheet" type="text/css" href="Css/input.css">
 </head>
 <body>
 <header class="title">
-    <div>
         <span>Вариант 2627</span>
-        <span class="name-group">Елена Ходосова, P3230</span>
-    </div>
+
+       <span class="name-group">Елена Ходосова, P3230</span>
+           <span><img class="head-img"  src="resources/kind.gif" id="kind"
+                                                            onmouseover="this.src='resources/angry.gif'"
+                                                            onmouseout="this.src='resources/kind.gif'">
+    </span>
 </header>
 <div class="page">
 <form class="send_form" id="send_form">
@@ -96,12 +100,14 @@
             </div>
         </div>
     </div>
+    <br>
     <div class="buttons">
         <button class="sender" type="submit" id="sendButton">Send</button>
         <button class="button" type="button" id="clearButton">Clear</button>
     </div>
 </form>
-    <img src="resources/odz.png" id="odz">
+    <div title="Range of acceptable values">
+    <img  src="resources/odz.png" id="odz"></div>
 <div class="table" id="res">
     <table>
         <tr>
@@ -116,7 +122,6 @@
 </div>
 </div>
 
-<img src="resources/cat.gif" id="cat">
 <script src="Js/front_script.js"></script>
 </body>
 </html>

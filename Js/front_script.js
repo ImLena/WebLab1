@@ -7,28 +7,34 @@ function checkY() {
             return true
         } else {
             Y.setCustomValidity("Must be (-3;5)");
-            //alert("");
-            return false
+            return false;
         }
     } else {
         Y.setCustomValidity("Must be number");
-        //alert("Must be number");
-        return false
+        return false;
     }
 }
+
 
 const submit = function(ev) {
     if (!checkY()) return
     ev.preventDefault();
 
     const data = new FormData();
-    let X;
+    let X = null;
     let R;
     for (let i = 0; i < x_values.length; i++) {
         if (x_values[i].checked) {
             X = x_values[i].value;
             break;
         }
+
+    }
+    if (X == null){
+        //  X.setCustomValidity("Must be number");
+        alert("Choose one X value")
+        return false;
+
     }
     let count = 0;
     for (let i = 0; i < r_values.length; i++) {
@@ -37,10 +43,19 @@ const submit = function(ev) {
             count++;
         }
         if (count > 1){
-            alert("Allowed only 1 R value");
+            alert("Allowed only one R value");
+            ev.preventDefault();
             return false;
         }
+
     }
+    if (count == 0){
+        alert("Choose one R value");
+        ev.preventDefault();
+        return false;
+    }
+
+
     data.append('x_val', X);
     data.append("y_val", Y.value);
     data.append('r_val', R);
@@ -50,7 +65,7 @@ const submit = function(ev) {
            .send(data)
            .then(res => res.text())
            .then(table => document.querySelector('#res').innerML=table)
-   /**/
+   */
 
     fetch('Php/function.php', {
         method: 'POST',

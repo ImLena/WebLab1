@@ -17,8 +17,8 @@ body {
 
 .page {
     display: grid;
-    grid-template-columns: 30% 30% 1fr;
-    grid-template-rows: 30% 30%;
+    grid-template-columns: 30% 25% 1fr;
+    grid-template-rows: 30% 1fr;
     grid-gap: 5%;
     margin-left: 4%;
     margin-right: 4%;
@@ -30,20 +30,49 @@ body {
     color: #FFF;
     font-style: italic;
     font-family: Arial, sans-serif;
-    font-size: 26px;
-    padding: 1%;
-    display: flex;
-    flex-direction: column-reverse;
+    font-size: 32px;
+    padding: 2%;
 }
 .name-group{
     float: right;
 }
+.send_form{
+    width: 100%;
+}
 
 #odz{
     float: contour;
-    size: 20px;
+    width: 100%;
+    position: relative;
 }
 
-#cat{
-    float: right;
+.head-img{
+    height: 3%;
+    width: 3%;
+    vertical-align: top;
+    margin-left: 2%;
+    float: contour;
+}
+
+@keyframes appear {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+
+page::backdrop{
+    animation: appear 2s 1;
+    animation-fill-mode: forwards;
+}
+
+#odz:hover {
+    box-shadow: 0 0 10px #c5d6ff;
 }
