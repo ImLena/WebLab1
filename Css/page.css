@@ -6,7 +6,9 @@ body {
     color: #000;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    height: 100%;/*
+    height: 100%;
+    margin: 0;
+    padding: 0;/*
     grid-template-areas:
     "header header header"
     "form img table";
@@ -30,8 +32,8 @@ body {
     color: #FFF;
     font-style: italic;
     font-family: Arial, sans-serif;
-    font-size: 32px;
-    padding: 2%;
+    font-size: 26px;
+    padding: 1%;
 }
 .name-group{
     float: right;
@@ -47,7 +49,6 @@ body {
 }
 
 .head-img{
-    height: 3%;
     width: 3%;
     vertical-align: top;
     margin-left: 2%;

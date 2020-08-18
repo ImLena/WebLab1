@@ -1,28 +1,27 @@
 let   Y = document.getElementById('y-value');
 let r_values = document.getElementsByName('r');
 let x_values = document.getElementsByName('x-val');
+let X = null;
+let R;
 function checkY() {
-    if (isFinite(Y.value)) {
-        if (Y.value > -3 && Y.value < 5) {
-            return true
+    if (Y.value.trim() === "") {
+        return false
+    }else {
+        if (isFinite(Y.value)) {
+            if (Y.value.trim() > -3 && Y.value < 5) {
+                return true
+            } else {
+                Y.setCustomValidity("Must be (-3;5)");
+                return false
+            }
         } else {
-            Y.setCustomValidity("Must be (-3;5)");
-            return false;
+            Y.setCustomValidity("Must be number");
+            return false
         }
-    } else {
-        Y.setCustomValidity("Must be number");
-        return false;
     }
 }
 
-
-const submit = function(ev) {
-    if (!checkY()) return
-    ev.preventDefault();
-
-    const data = new FormData();
-    let X = null;
-    let R;
+function checkX() {
     for (let i = 0; i < x_values.length; i++) {
         if (x_values[i].checked) {
             X = x_values[i].value;
@@ -32,10 +31,13 @@ const submit = function(ev) {
     }
     if (X == null){
         //  X.setCustomValidity("Must be number");
-        alert("Choose one X value")
-        return false;
+        alert("Choose one X value");
+        return false
 
-    }
+    } else {return true}
+}
+
+function checkR() {
     let count = 0;
     for (let i = 0; i < r_values.length; i++) {
         if (r_values[i].checked) {
@@ -44,17 +46,25 @@ const submit = function(ev) {
         }
         if (count > 1){
             alert("Allowed only one R value");
-            ev.preventDefault();
             return false;
         }
 
     }
     if (count == 0){
         alert("Choose one R value");
-        ev.preventDefault();
         return false;
-    }
+    } else {return true}
 
+}
+
+
+const submit = function(ev) {
+    if (!(checkY())) return
+    if (!(checkR())) return
+    if (!(checkX())) return
+    ev.preventDefault();
+
+    const data = new FormData();
 
     data.append('x_val', X);
     data.append("y_val", Y.value);
